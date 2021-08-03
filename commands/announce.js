@@ -2,7 +2,6 @@ const Discord = module.require("discord.js");
 const info = require("../config.json");
 
 module.exports.run = async (bot, message, args) => {
-    if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.reply("You don't have enough permissions.");
     let ancmessage;
     let mchannel = message.mentions.channels.first();
     if (!mchannel) return message.reply("Please mention the channel in which you want to announce.");
